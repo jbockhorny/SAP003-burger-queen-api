@@ -2,10 +2,12 @@
 module.exports = (sequelize, DataTypes) => {
   const Order = sequelize.define('Order', {
     status: DataTypes.STRING,
+    client_name: DataTypes.STRING,
     is_table: DataTypes.DECIMAL
+
   }, {});
   Order.associate = function(models) {
-    // associations can be defined here
+    Order.hasMany(models.item)
   };
   return Order;
 };

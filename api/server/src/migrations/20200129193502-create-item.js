@@ -11,19 +11,29 @@ module.exports = {
       type: {
         type: Sequelize.STRING
       },
-      idproduct: {
-        type: Sequelize.DECIMAL
+      idProduct: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {model: 'Products', key: 'id'}
       },
-      idadditional: {
-        type: Sequelize.DECIMAL
+      idProductExtra: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+        references: {model: 'Products', key: 'id'}
       },
-      idorder: {
-        type: Sequelize.DECIMAL
+      counter: {
+        type: Sequelize.INTEGER
+      },
+      option: {
+        type: Sequelize.STRING
+      },
+      idOrder: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
+      },      
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE

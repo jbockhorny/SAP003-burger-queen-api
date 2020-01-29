@@ -2,12 +2,14 @@
 module.exports = (sequelize, DataTypes) => {
   const item = sequelize.define('item', {
     type: DataTypes.STRING,
-    idproduct: DataTypes.DECIMAL,
-    idadditional: DataTypes.DECIMAL,
-    idorder: DataTypes.DECIMAL
+    idProduct: DataTypes.INTEGER,
+    idProductExtra: DataTypes.INTEGER,
+    counter: DataTypes.INTEGER,
+    option: DataTypes.STRING,
+    idOrder: DataTypes.INTEGER
   }, {});
   item.associate = function(models) {
-    // associations can be defined here
+   
   };
   return item;
 };
