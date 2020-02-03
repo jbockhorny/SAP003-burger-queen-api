@@ -7,15 +7,15 @@ module.exports = {
     "database": "new_store_development",
     "host": "db",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "test": {
     "username": "postgres",
     "password": null,
     "database": "new_store_test",
-    "host": "db",
+    "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "production": {
     "username": process.env.DB_USER,
@@ -23,7 +23,7 @@ module.exports = {
     "database": process.env.DB_DATABASE,
     "host": process.env.DB_HOST,
     "dialect": "postgres",
-    "operatorsAliases": false,
+    "operatorsAliases": 0,
     "dialectOptions": {
       "ssl": true
     }

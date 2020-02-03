@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     idOrder: DataTypes.INTEGER
   }, {});
   item.associate = function(models) {
+    item.belongsTo(models.Product)
+    item.belongsTo(models.Order)
    
   };
   return item;
